@@ -15,10 +15,10 @@ class userProfile(models.Model):
         max_length=10,
         help_text="format : YYYY-MM-DD",
         null=True)
-    gender_choices = [('M', 'Male'), ('F', 'Female')]
+    gender_choices = [('Male', 'Male'), ('Female', 'Female')]
     gender = models.CharField(
         choices=gender_choices,
-        max_length=1,
+        max_length=6,
         default=None,
         null=True)
     date_joined = models.DateTimeField(auto_now_add=True)

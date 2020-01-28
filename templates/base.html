@@ -1,0 +1,74 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <title>KOBACAPITAL</title>
+    <meta content="Financial Management System, Koba Capital" name="description" />
+    <meta content="KobaCapital" name="author" />
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
+      <!-- DataTables -->
+      <link href="{% static 'plugins/datatables/dataTables.bootstrap4.min.css' %}" rel="stylesheet" type="text/css" />
+      <link href="{% static 'plugins/datatables/buttons.bootstrap4.min.css' %}" rel="stylesheet" type="text/css" />
+
+      <!-- Responsive datatable examples -->
+      <link href="{% static 'plugins/datatables/responsive.bootstrap4.min.css' %}" rel="stylesheet" type="text/css" />
+
+    <!--Morris Chart CSS -->
+    <link rel="stylesheet" href="{% static 'plugins/morris/morris.css' %}">
+
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/metismenu.min.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/icons.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/4.7.95/css/materialdesignicons.css" type="text/css">
+</head>
+<body>
+    <div id="wrapper">
+         <!-- Topbar -->
+    {% include 'partials/_topbar.html' %}
+    <!-- Navbar -->
+    {% include 'partials/_navbar.html' %}
+        {% block content %}
+        {% endblock %}
+    </div>
+    <!-- jQuery  -->
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'js/metismenu.min.js' %}"></script>
+    <script src="{% static 'js/jquery.slimscroll.js' %}"></script>
+    <script src="{% static 'js/waves.min.js' %}"></script>
+
+    <!-- App js -->
+    <script src="{% static 'js/app.js' %}"></script>
+
+    <!--Morris Chart-->
+    <script src="{% static 'plugins/morris/morris.min.js' %}"></script>
+    <script src="{% static 'plugins/raphael/raphael.min.js' %}"></script>
+
+    <script src="assets/pages/dashboard.init.js"></script>
+     <!-- Required datatable js -->
+     <script src="{% static 'plugins/datatables/jquery.dataTables.min.js' %}"></script>
+     <script src="{% static 'plugins/datatables/dataTables.bootstrap4.min.js' %}"></script>
+     <!-- Buttons examples -->
+     <script src="{% static 'plugins/datatables/dataTables.buttons.min.js' %}"></script>
+     <script src="{% static 'plugins/datatables/buttons.bootstrap4.min.js' %}"></script>
+     <script src="{% static 'plugins/datatables/jszip.min.js' %}"></script>
+     <script src="{% static 'plugins/datatables/pdfmake.min.js' %}"></script>
+     <script src="{% static 'plugins/datatables/vfs_fonts.js' %}"></script>
+     <script src="{% static 'plugins/datatables/buttons.html5.min.js' %}"></script>
+     <script src="{% static 'plugins/datatables/buttons.print.min.js' %}"></script>
+     <script src="{% static 'plugins/datatables/buttons.colVis.min.js' %}"></script>
+     <!-- Responsive examples -->
+     <script src="{% static 'plugins/datatables/dataTables.responsive.min.js' %}"></script>
+     <script src="{% static 'plugins/datatables/responsive.bootstrap4.min.js' %}"></script>
+      <!-- Datatable init js -->
+      <script src="{% static 'datatables.init.js'%}"></script> 
+
+    
+
+   
+</body>
+</html>

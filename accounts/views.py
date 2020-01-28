@@ -21,3 +21,5 @@ class userProfileDetailView(RetrieveUpdateDestroyAPIView):
     queryset = userProfile.objects.all()
     serializer_class = userProfileSerializer
     permission_classes = [IsOwnerProfileOrReadOnly, IsAuthenticated]
+
+    

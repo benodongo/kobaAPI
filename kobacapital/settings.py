@@ -26,12 +26,13 @@ SECRET_KEY = 'yl39_&#%y!!o=x#ub$h-+da_bh3%&d_tbat^h645&vv5%9y@o0'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["127.0.0.1", "192.168.88.146"]
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'mis',
     'loans',
     'accounts',
     'django.contrib.admin',
@@ -60,7 +61,7 @@ ROOT_URLCONF = 'kobacapital.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -145,7 +146,15 @@ REST_FRAMEWORK = {
 
 
 SIMPLE_JWT = {
+    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=30),
     'JWT_ALLOW_REFRESH': True,
     'JWT_EXPIRATION_DELTA': timedelta(hours=1),
     'JWT_REFRESH_EXPIRATION_DELTA': timedelta(days=7),
+}
+
+#messages
+from django.contrib.messages import constants as messages
+MESSAGE_TAGS = {
+    messages.ERROR: 'danger',
+    
 }
